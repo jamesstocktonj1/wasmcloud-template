@@ -39,7 +39,7 @@ jobs:
       - name: Setup wasm-tools
         uses: taiki-e/cache-cargo-install-action@v2
         with:
-          tool: wasm-tools
+          tool: wasm-tools@1.221.2
 
       - name: Build Component
         run: wash build -p components/${{ matrix.component }}
