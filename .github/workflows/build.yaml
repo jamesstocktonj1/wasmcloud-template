@@ -42,9 +42,7 @@ jobs:
           tool: wasm-tools
 
       - name: Build Component
-        run: |
-          mkdir component/${{ matrix.component }}/build
-          wash build -p component/${{ matrix.component }}
+        run: wash build -p components/${{ matrix.component }}
       - name: Publish Component
         env:
           WASH_REG_USER: ${{ github.actor }}
