@@ -1,0 +1,42 @@
+name: Publish Wit
+
+on:
+  push:
+    paths:
+      - wit/**
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    name: Wit Workflow
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+
+      - name: Install wash-cli
+        uses: wasmCloud/common-actions/install-wash@main
+      - name: Setup Registry
+        env:
+          WASH_REG_USER: ${{ github.actor }}
+          WASH_REG_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cat << EOF > package_config.toml
+          [namespace_registries]
+          jamesstocktonj1 = "ghcr.io"
+
+          [registry."ghcr.io".oci]
+          auth = { username = "${WASH_REG_USER}", password = "${WASH_REG_PASSWORD}" }
+          EOF
+          echo "WASH_PACKAGE_CONFIG_FILE=$(realpath package_config.toml)" >> $GITHUB_ENV
+
+      - name: Build Wit
+        run: wash wit build
+      - name: Publish Wit
+        run: wash wit publish *.wasm

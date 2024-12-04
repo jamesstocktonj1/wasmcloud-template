@@ -1,0 +1,10 @@
+package jamesstocktonj1:wasmcloud-template@0.1.0;
+
+interface connect {
+  record request {
+    message: string,
+    name: string
+  }
+
+  greet: func(req: request) -> string;
+}
