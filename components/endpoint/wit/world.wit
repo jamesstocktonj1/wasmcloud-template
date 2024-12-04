@@ -1,0 +1,8 @@
+package jamesstocktonj1:endpoint;
+
+world endpoint {
+  include wasmcloud:component-go/imports@0.1.0;
+  import jamesstocktonj1:wasmcloud-template/connect@0.1.0;
+
+  export wasi:http/incoming-handler@0.2.0;
+}

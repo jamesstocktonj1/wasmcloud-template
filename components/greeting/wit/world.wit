@@ -1,4 +1,4 @@
-package wasmcloud:hello;
+package jamesstocktonj1:greeting;
 
 world greeting {
   include wasmcloud:component-go/imports@0.1.0;
