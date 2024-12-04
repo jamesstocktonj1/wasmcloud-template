@@ -14,10 +14,18 @@ permissions:
   packages: write
 
 jobs:
-  setup-tools:
-    name: Setup Toolchain
+  build-components:
+    name: Build Components
     runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        component:
+          - endpoint
+          - greeting
     steps:
+      - uses: actions/checkout@v4
+
       - name: Setup wash-cli
         uses: wasmCloud/common-actions/install-wash@main
       - name: Setup TinyGo
@@ -28,19 +36,6 @@ jobs:
         uses: taiki-e/cache-cargo-install-action@v2
         with:
           tool: wasm-tools@1.221.2
-
-  build-components:
-    name: Build Components
-    needs: setup-tools
-    runs-on: ubuntu-22.04
-    strategy:
-      fail-fast: false
-      matrix:
-        component:
-          - endpoint
-          - greeting
-    steps:
-      - uses: actions/checkout@v4
 
       - name: Build Component
         run: wash build -p components/${{ matrix.component }}
