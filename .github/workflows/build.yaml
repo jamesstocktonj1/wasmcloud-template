@@ -14,32 +14,15 @@ permissions:
   packages: write
 
 jobs:
-  changed-components:
-    name: Get changed files
-    runs-on: ubuntu-latest
-    outputs:
-      components: ${{ steps.changed-components.outputs.changed_components }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Get changed files
-        id: changed-components
-        uses: ./components
-        with:
-          matrix: true
-      - name: List all changed files
-        run: echo '${{ steps.changed-components.outputs.changed_components }}'
-
   build-components:
     name: Build Components
-    needs: changed-components
     runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
-        component: ${{ fromJSON(needs.changed-files.outputs.components) }}
+        component:
+          - endpoint
+          - greeting
     steps:
       - uses: actions/checkout@v4
 
