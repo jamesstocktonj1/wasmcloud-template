@@ -32,6 +32,7 @@ jobs:
   build-components:
     name: Build Components
     needs: setup-tools
+    runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
