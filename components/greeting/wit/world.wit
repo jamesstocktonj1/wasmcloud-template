@@ -1,0 +1,7 @@
+package wasmcloud:hello;
+
+world greeting {
+  include wasmcloud:component-go/imports@0.1.0;
+
+  export jamesstocktonj1:wasmcloud-template/connect@0.1.0;
+}
