@@ -5,6 +5,7 @@ import (
 	"fmt"
 
 	"github.com/jamesstocktonj1/wasmcloud-template/components/greeting/gen/jamesstocktonj1/wasmcloud-template/connect"
+	"go.wasmcloud.dev/component/wasmcloud"
 )
 
 func init() {
@@ -12,7 +13,8 @@ func init() {
 }
 
 func greetHandler(req connect.Request) string {
-	return fmt.Sprintf("%s, %s!", req.Message, req.Name)
+	format := wasmcloud.GetConfigOrDefault("format", "%s, %s!")
+	return fmt.Sprintf(format, req.Message, req.Name)
 }
 
 func main() {}

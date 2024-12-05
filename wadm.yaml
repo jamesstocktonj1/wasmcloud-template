@@ -10,6 +10,7 @@ spec:
       type: component
       properties:
         image: file://./components/endpoint/build/endpoint_s.wasm
+        # image: ghcr.io/jamesstocktonj1/wasmcloud-template/component-endpoint:main
       traits:
         - type: spreadscaler
           properties:
@@ -25,6 +26,11 @@ spec:
       type: component
       properties:
         image: file://./components/greeting/build/greeting_s.wasm
+        # image: ghcr.io/jamesstocktonj1/wasmcloud-template/component-greeting:main
+        config:
+          - name: greeting-config
+            properties:
+              format: "New %s, %s!"
       traits:
         - type: spreadscaler
           properties:
