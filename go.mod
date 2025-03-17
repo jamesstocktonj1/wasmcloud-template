@@ -1,10 +1,11 @@
 module github.com/jamesstocktonj1/wasmcloud-template
 
 go 1.23.1
+toolchain go1.24.1
 
 require (
 	github.com/bytecodealliance/wasm-tools-go v0.3.2
-	go.bytecodealliance.org/cm v0.1.0
+	go.bytecodealliance.org/cm v0.2.1
 	go.wasmcloud.dev/component v0.0.5
 	go.wasmcloud.dev/wadge v0.7.0
 )
