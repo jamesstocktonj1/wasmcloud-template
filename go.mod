@@ -1,15 +1,15 @@
 module github.com/jamesstocktonj1/wasmcloud-template
 
-go 1.23.1
+go 1.24
 
 require (
-	github.com/bytecodealliance/wasm-tools-go v0.3.2
-	go.bytecodealliance.org/cm v0.1.0
+	go.bytecodealliance.org v0.4.0
 	go.wasmcloud.dev/component v0.0.5
 	go.wasmcloud.dev/wadge v0.7.0
 )
 
 require (
+	github.com/bytecodealliance/wasm-tools-go v0.3.2 // indirect
 	github.com/coreos/go-semver v0.3.1 // indirect
 	github.com/docker/libtrust v0.0.0-20160708172513-aabc10ec26b7 // indirect
 	github.com/klauspost/compress v1.17.11 // indirect
@@ -23,3 +23,7 @@ require (
 	golang.org/x/sys v0.28.0 // indirect
 	golang.org/x/tools v0.28.0 // indirect
 )
+
+tool go.bytecodealliance.org/cmd/wit-bindgen-go
+
+tool go.wasmcloud.dev/wadge/cmd/wadge-bindgen-go
