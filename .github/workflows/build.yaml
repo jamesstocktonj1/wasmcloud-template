@@ -5,6 +5,8 @@ on:
     branches:
       - main
     paths:
+      - go.*
+      - wit/**
       - components/**
       - .github/workflows/build.yaml
   workflow_dispatch:
@@ -31,11 +33,7 @@ jobs:
       - name: Setup TinyGo
         uses: acifani/setup-tinygo@v2
         with:
-          tinygo-version: '0.34.0'
-      - name: Setup wasm-tools
-        uses: taiki-e/cache-cargo-install-action@v2
-        with:
-          tool: wasm-tools@1.221.2
+          tinygo-version: '0.37.0'
 
       - name: Build Component
         run: wash build -p components/${{ matrix.component }}
