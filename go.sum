@@ -35,8 +35,8 @@ go.bytecodealliance.org v0.6.3-0.20250520224056-999af0bcfafa h1:WLAfgqSeXsjlXMAW
 go.bytecodealliance.org v0.6.3-0.20250520224056-999af0bcfafa/go.mod h1:teqCHVnD9haJvzF+FeCyJbXhnHalL15l1jrabAE3aqE=
 go.bytecodealliance.org/cm v0.2.3-0.20250520224056-999af0bcfafa h1:wHODz35OJytRc27+bij0IfUWknujSuClVc/KRyaG47s=
 go.bytecodealliance.org/cm v0.2.3-0.20250520224056-999af0bcfafa/go.mod h1:JD5vtVNZv7sBoQQkvBvAAVKJPhR/bqBH7yYXTItMfZI=
-go.wasmcloud.dev/component v0.0.5 h1:z9+fq1CJKm/yom33ctd5wfo8TVunm5IaI7EJdY2i9hk=
-go.wasmcloud.dev/component v0.0.5/go.mod h1:PvVHQ7Xp8D9kZnVB3fm8lqWAcC6Yxd7CI/snXZUAG8E=
+go.wasmcloud.dev/component v0.0.8 h1:6tQjaKqYpxpB5s0ZQku4pdZN7mjOQEsUCVo+vfuqLKE=
+go.wasmcloud.dev/component v0.0.8/go.mod h1:Ww1oCrzFXk/QSlE7X/vJRI7rF3bmhCc/Usp7Isf8Atw=
 go.wasmcloud.dev/wadge v0.8.0 h1:slJUvgtCrzLvgGJUmQcmR2zaz9FyQ7zWTyenbEj8+3g=
 go.wasmcloud.dev/wadge v0.8.0/go.mod h1:JeA8WUjdw7ChpmxUtf9NfEcor2tx+UUubNXByUlL63U=
 golang.org/x/mod v0.24.0 h1:ZfthKaKaT4NrhGVZHO1/WDTwGES4De8KtWO0SIbNJMU=

@@ -4,7 +4,7 @@ go 1.24
 
 require (
 	go.bytecodealliance.org/cm v0.2.3-0.20250520224056-999af0bcfafa
-	go.wasmcloud.dev/component v0.0.5
+	go.wasmcloud.dev/component v0.0.8
 	go.wasmcloud.dev/wadge v0.8.0
 )
 
