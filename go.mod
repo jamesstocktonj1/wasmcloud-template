@@ -3,8 +3,8 @@ module github.com/jamesstocktonj1/wasmcloud-template
 go 1.24
 
 require (
-	go.bytecodealliance.org/cm v0.2.3-0.20250520224056-999af0bcfafa
-	go.wasmcloud.dev/component v0.0.9
+	go.bytecodealliance.org/cm v0.3.0
+	go.wasmcloud.dev/component v0.0.10
 	go.wasmcloud.dev/wadge v0.8.0
 )
 
@@ -18,7 +18,7 @@ require (
 	github.com/tetratelabs/wazero v1.9.0 // indirect
 	github.com/ulikunitz/xz v0.5.12 // indirect
 	github.com/urfave/cli/v3 v3.3.3 // indirect
-	go.bytecodealliance.org v0.6.3-0.20250520224056-999af0bcfafa // indirect
+	go.bytecodealliance.org v0.7.0 // indirect
 	golang.org/x/mod v0.24.0 // indirect
 	golang.org/x/sync v0.14.0 // indirect
 	golang.org/x/sys v0.33.0 // indirect
